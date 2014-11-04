@@ -9,7 +9,7 @@ Main idea
 ============================
 > The main idea is to have an **abstract system** that everyone can use. 
 > 
-> If you want a personal website to be more convincing when you are **applying for a job**, or just to put it on your **visiting card**, this system is a very cool way to do this. 
+> If you want a personal website to be more convincing when you are **applying for a job**, or just to put it on your **visiting card**, or you are a freelancer and searching a way to advertise yourself - this system is a very cool way to do this. 
 
 How to use
 ============================
@@ -22,6 +22,22 @@ Administration panel
 The administration panel allow you to manage your previous experience, skills, portfolio and blog.
 
 **Access with the endpoind:** /admin
+
+Main features
+============================
+* Personal blog
+* Skills manager
+* CV (History of previous work experience)
+* Portfolio
+* Connections with all social medias and a contact form (Hire, Invite)
+* Personal calendar (TODOs and scheduling)
+
+Widgets
+============================
+* Github stats
+* Top 5 skills
+* Now working on    
+
 
 Example layout for the system
 ============================
