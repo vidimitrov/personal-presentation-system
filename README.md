@@ -9,7 +9,7 @@ Main idea
 ============================
 > The main idea is to have an **abstract system** that everyone can use. 
 > 
-> If you want a personal website to be more convincing when you are **applying for a job**, or just to put it on your **visiting card**, or you are a freelancer and searching a way to advertise yourself - this system is a very cool way to do this. 
+> If you want a personal website to be more convincing when you are **applying for a job**, or just to put it on your **business card**, or you are a freelancer and searching a way to advertise yourself - this system is a very cool way to do this. 
 
 How to use
 ============================
