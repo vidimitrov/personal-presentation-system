@@ -26,6 +26,8 @@
 
         public string ShortContent { get; set; }
 
+        public DateTime DateCreated { get; set; }
+
         [Required]
         public string Content { get; set; }
 

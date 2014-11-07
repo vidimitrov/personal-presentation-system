@@ -5,6 +5,7 @@
 
     using PPSystem.Models;
     using PPSystem.Data.Migrations;
+    using PPSystem.Models.Blog;
     
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -14,7 +15,9 @@
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }
         
-        //public IDbSet<Car> Cars { get; set; }
+        public IDbSet<Post> Posts { get; set; }
+        public IDbSet<Comment> Comments { get; set; }
+        public IDbSet<Tag> Tags { get; set; }
 
         public static ApplicationDbContext Create()
         {
