@@ -17,6 +17,8 @@
             return userIdentity;
         }
 
+        public bool IsAvailable { get; set; }
+
         public string Photo { get; set; }
 
         public string JobPosition { get; set; }
