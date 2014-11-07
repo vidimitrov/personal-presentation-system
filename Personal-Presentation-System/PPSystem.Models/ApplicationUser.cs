@@ -16,5 +16,31 @@
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Photo { get; set; }
+
+        public string JobPosition { get; set; }
+
+        public string JobCompany { get; set; }
+
+        public string Summary { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Location { get; set; }
+
+        public string WebSite { get; set; }
+
+        public string Skype { get; set; }
+
+        public string Facebook { get; set; }
+
+        public string Google { get; set; }
+
+        public string Twitter { get; set; }
+
+        public string LinkedIn { get; set; }
+
+        public string GitHub { get; set; }
     }
 }

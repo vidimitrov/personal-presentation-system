@@ -39,6 +39,10 @@ Widgets
 * Now working on    
 
 
+See the current progress in the Trello board
+============================
+Trello: [https://trello.com/b/QsiCIioy](https://trello.com/b/QsiCIioy)
+
 Example layout for the system
 ============================
 
