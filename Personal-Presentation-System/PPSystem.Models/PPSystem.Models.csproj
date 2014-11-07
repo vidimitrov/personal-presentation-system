@@ -53,6 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationUser.cs" />
+    <Compile Include="Blog\Comment.cs" />
+    <Compile Include="Blog\Post.cs" />
+    <Compile Include="Blog\Tag.cs" />
+    <Compile Include="CV\CV.cs" />
+    <Compile Include="CV\Portfolio.cs" />
+    <Compile Include="CV\Project.cs" />
+    <Compile Include="CV\Skill.cs" />
+    <Compile Include="CV\SkillCategory.cs" />
+    <Compile Include="DailyCalendar\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

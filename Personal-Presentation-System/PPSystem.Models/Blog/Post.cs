@@ -19,7 +19,7 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength=6]
+        [MinLength(6)]
         public string Title { get; set; }
 
         public string SubTitle { get; set; }
