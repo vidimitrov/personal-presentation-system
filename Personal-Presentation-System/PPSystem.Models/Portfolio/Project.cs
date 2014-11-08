@@ -30,7 +30,7 @@
         
         public string Image { get; set; }
         
-        public ICollection<Technology> Technologies
+        public virtual ICollection<Technology> Technologies
         { 
             get{ return this.technologies; }
             set { this.technologies = value; }

@@ -56,18 +56,27 @@
     <Compile Include="Blog\Comment.cs" />
     <Compile Include="Blog\Post.cs" />
     <Compile Include="Blog\Tag.cs" />
+    <Compile Include="CV\Competition.cs" />
     <Compile Include="CV\CV.cs" />
-    <Compile Include="CV\Portfolio.cs" />
-    <Compile Include="CV\Project.cs" />
+    <Compile Include="CV\EducationInstitution.cs" />
+    <Compile Include="CV\Experience.cs" />
+    <Compile Include="CV\ExperienceType.cs" />
+    <Compile Include="CV\Language.cs" />
+    <Compile Include="Portfolio\Portfolio.cs" />
+    <Compile Include="Portfolio\Project.cs" />
+    <Compile Include="Portfolio\ProjectCategory.cs" />
+    <Compile Include="Portfolio\Contributor.cs" />
     <Compile Include="CV\Skill.cs" />
     <Compile Include="CV\SkillCategory.cs" />
     <Compile Include="DailyCalendar\Task.cs" />
+    <Compile Include="Portfolio\Technology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

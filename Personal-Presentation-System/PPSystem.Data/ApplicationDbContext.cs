@@ -6,6 +6,8 @@
     using PPSystem.Models;
     using PPSystem.Data.Migrations;
     using PPSystem.Models.Blog;
+    using PPSystem.Models.Portfolio;
+    using PPSystem.Models.CV;
     
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -18,6 +20,21 @@
         public IDbSet<Post> Posts { get; set; }
         public IDbSet<Comment> Comments { get; set; }
         public IDbSet<Tag> Tags { get; set; }
+
+        public IDbSet<Portfolio> Portfolios { get; set; }
+        public IDbSet<Project> Projects { get; set; }
+        public IDbSet<Contributor> Contributors { get; set; }
+        public IDbSet<ProjectCategory> ProjectCategories { get; set; }
+        public IDbSet<Technology> Technologies { get; set; }
+
+        public IDbSet<CV> CVs { get; set; }
+        public IDbSet<Skill> Skills { get; set; }
+        public IDbSet<SkillCategory> SkillCategories { get; set; }
+        public IDbSet<Competition> Competitions { get; set; }
+        public IDbSet<EducationInstitution> EducationInstitutions { get; set; }
+        public IDbSet<Experience> Experiences { get; set; }
+        public IDbSet<ExperienceType> ExperienceTypes { get; set; }
+        public IDbSet<Language> Languages { get; set; }
 
         public static ApplicationDbContext Create()
         {

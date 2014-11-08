@@ -17,6 +17,8 @@
             return userIdentity;
         }
 
+        public string FullName { get; set; }
+
         public bool IsAvailable { get; set; }
 
         public string Photo { get; set; }
