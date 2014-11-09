@@ -55,6 +55,9 @@
       <HintPath>..\packages\Glimpse.Mvc5.1.5.3\lib\net45\Glimpse.Mvc5.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RouteDebugger">
+      <HintPath>..\packages\routedebugger.2.1.4.0\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -183,9 +186,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\DashboardController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\CVController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -198,12 +207,44 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\bg.png" />
+    <Content Include="Content\images\bottom.png" />
+    <Content Include="Content\images\CheatinReminderLogo.jpg" />
+    <Content Include="Content\images\DebuggingSystemLogo.jpg" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\LevteriLogo.jpg" />
+    <Content Include="Content\images\LibraryProjectLogo.jpg" />
+    <Content Include="Content\images\VD_Logo.png" />
+    <Content Include="Content\images\WarChessLogo.jpg" />
+    <Content Include="Content\PPSystem-UI\css\main.css" />
+    <Content Include="Content\PPSystem-UI\css\normalize.min.css" />
+    <Content Include="Content\PPSystem-UI\images\bg.jpg" />
+    <Content Include="Content\PPSystem-UI\images\bg.png" />
+    <Content Include="Content\PPSystem-UI\images\bottom.png" />
+    <Content Include="Content\PPSystem-UI\images\CheatinReminderLogo.jpg" />
+    <Content Include="Content\PPSystem-UI\images\DebuggingSystemLogo.jpg" />
+    <Content Include="Content\PPSystem-UI\images\favicon.ico" />
+    <Content Include="Content\PPSystem-UI\images\LevteriLogo.jpg" />
+    <Content Include="Content\PPSystem-UI\images\LibraryProjectLogo.jpg" />
+    <Content Include="Content\PPSystem-UI\images\VD_Logo.png" />
+    <Content Include="Content\PPSystem-UI\images\WarChessLogo.jpg" />
+    <Content Include="Content\PPSystem-UI\index.html" />
+    <Content Include="Content\PPSystem-UI\js\main.js" />
+    <Content Include="Content\PPSystem-UI\js\vendor\html5shiv.js" />
+    <Content Include="Content\PPSystem-UI\js\vendor\jquery-1.11.0.min.js" />
+    <Content Include="Content\PPSystem-UI\js\vendor\jquery.easytabs.min.js" />
+    <Content Include="Content\PPSystem-UI\js\vendor\jquery.hashchange.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Administration\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -227,9 +268,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Pages\About.cshtml" />
+    <Content Include="Views\Pages\Contact.cshtml" />
+    <Content Include="Views\Pages\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -254,9 +295,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\CV\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Portfolio\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

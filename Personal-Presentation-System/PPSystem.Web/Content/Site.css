@@ -1,6 +1,9 @@
-﻿body {
+﻿body
+{
     padding-top: 50px;
     padding-bottom: 20px;
+    background: url('images/bg.png') repeat;
+    color: #CBCBCB;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +24,17 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+#logo {
+    height: 50px;
+}
+
+#logo img {
+    height: 100%;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #16BFCE;
+    border-color: #16BFCE; 
 }
