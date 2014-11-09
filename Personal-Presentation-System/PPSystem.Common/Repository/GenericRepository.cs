@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Data.Repositories.Base
+﻿namespace PPSystem.Common.Repository
 {
     using System;
     using System.ComponentModel.DataAnnotations;
