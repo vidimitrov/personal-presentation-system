@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Glimpse.Ado">
       <HintPath>..\packages\Glimpse.Ado.1.7.3\lib\net45\Glimpse.Ado.dll</HintPath>
     </Reference>
@@ -334,6 +340,10 @@
     <ProjectReference Include="..\PPSystem.Models\PPSystem.Models.csproj">
       <Project>{8d5b2fad-3918-44d2-9d88-5d1b7b755b7a}</Project>
       <Name>PPSystem.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PPSystem.Web.Infrastructure\PPSystem.Web.Infrastructure.csproj">
+      <Project>{9d11b6b3-a5a6-435d-a4ea-45e08c5f69b6}</Project>
+      <Name>PPSystem.Web.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
