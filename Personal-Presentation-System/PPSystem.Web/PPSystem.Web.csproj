@@ -312,6 +312,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PPSystem.Common\PPSystem.Common.csproj">
+      <Project>{781bbb47-fbed-4f2a-8a5a-02b86ebf6515}</Project>
+      <Name>PPSystem.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PPSystem.Data\PPSystem.Data.csproj">
       <Project>{4ce48818-09a4-4eca-bd39-c9c15a643d9c}</Project>
       <Name>PPSystem.Data</Name>

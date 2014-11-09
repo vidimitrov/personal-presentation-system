@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-namespace PPSystem.Models.Blog
+﻿namespace PPSystem.Models.Blog
 {
-    public class Tag
+    using System;
+    using PPSystem.Common.Models;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    public class Tag : AuditInfo, IDeletableEntity
     {
         private ICollection<Post> posts;
 
@@ -15,6 +18,10 @@ namespace PPSystem.Models.Blog
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        public DateTime? DeletedOn { get; set; }
 
         public virtual ICollection<Post> Posts
         {
