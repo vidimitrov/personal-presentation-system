@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Models.DailyCalendar
+﻿namespace PPSystem.Data.Models.DailyCalendar
 {
     public class Task
     {

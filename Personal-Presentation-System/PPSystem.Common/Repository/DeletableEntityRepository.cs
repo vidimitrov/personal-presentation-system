@@ -1,10 +1,10 @@
-﻿namespace PPSystem.Common.Repository
+﻿namespace PPSystem.Data.Common.Repository
 {
     using System.Linq;
     using System.Data.Entity;
     
-    using PPSystem.Common.Models;
-    using PPSystem.Common.Repository;
+    using PPSystem.Data.Common.Models;
+    using PPSystem.Data.Common.Repository;
 
     public class DeletableEntityRepository<T> : GenericRepository<T>, IDeletableEntityRepository<T>
         where T : class, IDeletableEntity

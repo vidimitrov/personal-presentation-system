@@ -330,17 +330,17 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PPSystem.Common\PPSystem.Common.csproj">
+    <ProjectReference Include="..\PPSystem.Common\PPSystem.Data.Common.csproj">
       <Project>{781bbb47-fbed-4f2a-8a5a-02b86ebf6515}</Project>
-      <Name>PPSystem.Common</Name>
+      <Name>PPSystem.Data.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\PPSystem.Data\PPSystem.Data.csproj">
       <Project>{4ce48818-09a4-4eca-bd39-c9c15a643d9c}</Project>
       <Name>PPSystem.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PPSystem.Models\PPSystem.Models.csproj">
+    <ProjectReference Include="..\PPSystem.Models\PPSystem.Data.Models.csproj">
       <Project>{8d5b2fad-3918-44d2-9d88-5d1b7b755b7a}</Project>
-      <Name>PPSystem.Models</Name>
+      <Name>PPSystem.Data.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\PPSystem.Web.Infrastructure\PPSystem.Web.Infrastructure.csproj">
       <Project>{9d11b6b3-a5a6-435d-a4ea-45e08c5f69b6}</Project>

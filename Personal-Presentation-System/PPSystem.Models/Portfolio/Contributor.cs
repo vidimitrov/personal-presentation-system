@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Models.Portfolio
+﻿namespace PPSystem.Data.Models.Portfolio
 {
     using System;
     using System.Collections.Generic;

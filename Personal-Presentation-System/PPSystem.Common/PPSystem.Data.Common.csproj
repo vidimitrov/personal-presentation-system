@@ -7,8 +7,8 @@
     <ProjectGuid>{781BBB47-FBED-4F2A-8A5A-02B86EBF6515}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PPSystem.Common</RootNamespace>
-    <AssemblyName>PPSystem.Common</AssemblyName>
+    <RootNamespace>PPSystem.Data.Common</RootNamespace>
+    <AssemblyName>PPSystem.Data.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

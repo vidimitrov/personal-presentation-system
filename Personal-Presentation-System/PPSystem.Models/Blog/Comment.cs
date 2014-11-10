@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Models.Blog
+﻿namespace PPSystem.Data.Models.Blog
 {
     using System.ComponentModel.DataAnnotations;
 

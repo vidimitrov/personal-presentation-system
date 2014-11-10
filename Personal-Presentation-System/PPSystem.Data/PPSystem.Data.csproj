@@ -61,11 +61,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PPSystem.Common\PPSystem.Common.csproj">
+    <ProjectReference Include="..\PPSystem.Common\PPSystem.Data.Common.csproj">
       <Project>{781bbb47-fbed-4f2a-8a5a-02b86ebf6515}</Project>
-      <Name>PPSystem.Common</Name>
+      <Name>PPSystem.Data.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PPSystem.Models\PPSystem.Models.csproj">
+    <ProjectReference Include="..\PPSystem.Models\PPSystem.Data.Models.csproj">
       <Project>{8d5b2fad-3918-44d2-9d88-5d1b7b755b7a}</Project>
       <Name>PPSystem.Models</Name>
     </ProjectReference>

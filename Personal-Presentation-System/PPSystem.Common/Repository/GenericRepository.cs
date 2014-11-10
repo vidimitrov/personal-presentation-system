@@ -1,12 +1,12 @@
-﻿namespace PPSystem.Common.Repository
+﻿namespace PPSystem.Data.Common.Repository
 {
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using System.Linq;
-    
-    using PPSystem.Common.Repository;
+
+    using PPSystem.Data.Common.Repository;
 
     public class GenericRepository<T> : IRepository<T> where T : class
     {

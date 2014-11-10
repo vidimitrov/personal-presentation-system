@@ -1,7 +1,7 @@
-﻿namespace PPSystem.Models.Blog
+﻿namespace PPSystem.Data.Models.Blog
 {
     using System;
-    using PPSystem.Common.Models;
+    using PPSystem.Data.Common.Models;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 

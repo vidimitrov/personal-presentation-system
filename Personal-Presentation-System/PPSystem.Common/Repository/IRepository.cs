@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Common.Repository
+﻿namespace PPSystem.Data.Common.Repository
 {
     using System;
     using System.Linq;

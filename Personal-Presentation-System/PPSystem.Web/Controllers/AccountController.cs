@@ -11,7 +11,7 @@
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
     using PPSystem.Web.Models;
-    using PPSystem.Models;
+    using PPSystem.Data.Models;
 
     [Authorize]
     public class AccountController : Controller

@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Models.Portfolio
+﻿namespace PPSystem.Data.Models.Portfolio
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

@@ -12,7 +12,7 @@ namespace PPSystem.Web.App_Start
     using Ninject.Web.Common;
     using System.Data.Entity;
     using PPSystem.Data;
-    using PPSystem.Common.Repository;
+    using PPSystem.Data.Common.Repository;
 
     public static class NinjectWebCommon 
     {

@@ -13,7 +13,7 @@
     using Microsoft.Owin;
     using Microsoft.Owin.Security;
     using PPSystem.Web.Models;
-    using PPSystem.Models;
+    using PPSystem.Data.Models;
     using PPSystem.Data;
 
     public class EmailService : IIdentityMessageService

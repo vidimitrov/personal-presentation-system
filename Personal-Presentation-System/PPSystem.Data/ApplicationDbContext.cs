@@ -6,12 +6,12 @@
 
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    using PPSystem.Models;
+    using PPSystem.Data.Models;
     using PPSystem.Data.Migrations;
-    using PPSystem.Models.Blog;
-    using PPSystem.Models.Portfolio;
-    using PPSystem.Models.CV;
-    using PPSystem.Common.Models;
+    using PPSystem.Data.Models.Blog;
+    using PPSystem.Data.Models.Portfolio;
+    using PPSystem.Data.Models.CV;
+    using PPSystem.Data.Common.Models;
     
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

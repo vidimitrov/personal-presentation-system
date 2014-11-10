@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Models
+﻿namespace PPSystem.Data.Models
 {
     using System;
     using System.Security.Claims;
@@ -6,7 +6,7 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    using PPSystem.Common.Models;
+    using PPSystem.Data.Common.Models;
 
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity

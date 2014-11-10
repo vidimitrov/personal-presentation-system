@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Common.Models
+﻿namespace PPSystem.Data.Common.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations.Schema;

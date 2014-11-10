@@ -1,4 +1,4 @@
-﻿namespace PPSystem.Models.CV
+﻿namespace PPSystem.Data.Models.CV
 {
     using System.ComponentModel.DataAnnotations;
 
