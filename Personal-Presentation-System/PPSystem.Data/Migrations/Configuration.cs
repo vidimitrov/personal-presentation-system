@@ -15,6 +15,7 @@ namespace PPSystem.Data.Migrations
         
         protected override void Seed(ApplicationDbContext context)
         {
+
         }
     }
 }
