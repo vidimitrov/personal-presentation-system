@@ -12,6 +12,9 @@
     using Microsoft.Owin.Security;
     using PPSystem.Web.Models;
     using PPSystem.Models;
+    using PPSystem.Web.ViewModels.Account;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using PPSystem.Data;
 
     [Authorize]
     public class AccountController : Controller
@@ -151,11 +154,11 @@
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(ConfigureOwnerViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FullName = model.FullName };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -166,6 +169,17 @@
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+
+                    // For more usability create a check before creating a user admin
+                    // If there are not any user, create the admin, else create a sample user
+                    // Only admin will have the rights to give him admin powers :D
+                    string adminRoleName = "Admin";
+
+                    var context = new ApplicationDbContext();
+                    context.Roles.Add(new IdentityRole(adminRoleName));
+                    context.SaveChanges();
+
+                    UserManager.AddToRole(user.Id, adminRoleName);
 
                     return RedirectToAction("Index", "Home");
                 }

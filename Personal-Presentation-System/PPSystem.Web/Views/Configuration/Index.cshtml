@@ -1,0 +1,49 @@
+﻿@model PPSystem.Web.ViewModels.Account.ConfigureOwnerViewModel
+@{
+    Layout = "~/Views/Configuration/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="jumbotron text-center" style="color: rgba(102, 102, 102, 1);">
+        <h3>Hello, new user. Configure your personal presentation system</h3>
+        <h5>You must enter some information about yourself as an initial values for your system</h5>
+        <h5>After that you can edit everything trough your admin panel</h5>
+    </div>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
+            <div class="col-md-5">
+                @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Continue" />
+            </div>
+        </div>
+    }
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>

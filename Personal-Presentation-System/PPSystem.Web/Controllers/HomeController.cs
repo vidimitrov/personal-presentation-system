@@ -14,17 +14,21 @@
     public class HomeController : Controller
     {
         private readonly IDeletableEntityRepository<ApplicationUser> users;
-        private readonly IDeletableEntityRepository<Post> posts;
 
-        public HomeController(IDeletableEntityRepository<ApplicationUser> users, 
-            IDeletableEntityRepository<Post> posts)
+        public HomeController(IDeletableEntityRepository<ApplicationUser> users)
         {
             this.users = users;
-            this.posts = posts;
         }
 
         public ActionResult Index()
         {
+            ICollection<ApplicationUser> allUsers = this.users.All().ToList();
+
+            if (allUsers.Count == 0)
+            {
+                return this.Redirect("/Configuration"); //RedirectToAction("ManageLogins", new { Message = message });
+            }
+
             return View();
         }
     }

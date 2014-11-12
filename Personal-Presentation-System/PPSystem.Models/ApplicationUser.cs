@@ -37,9 +37,7 @@
         public string JobCompany { get; set; }
 
         public string Summary { get; set; }
-
-        public string PhoneNumber { get; set; }
-
+        
         public string Location { get; set; }
 
         public string WebSite { get; set; }
