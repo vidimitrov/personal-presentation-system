@@ -13,6 +13,7 @@ namespace PPSystem.Web.App_Start
     using System.Data.Entity;
     using PPSystem.Data;
     using PPSystem.Common.Repository;
+    using PPSystem.Models.Blog;
 
     public static class NinjectWebCommon 
     {
@@ -65,6 +66,9 @@ namespace PPSystem.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<DbContext>().To<ApplicationDbContext>();
+
+            //kernel.Bind(typeof(IRepository<Post>)).To(typeof(DeletableEntityRepository<Post>));
+
             kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
             kernel.Bind(typeof(IRepository<>)).To(typeof(GenericRepository<>));
         }        

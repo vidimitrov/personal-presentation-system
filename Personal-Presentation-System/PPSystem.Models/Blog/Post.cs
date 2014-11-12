@@ -3,8 +3,10 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    
+    using PPSystem.Common.Models;
 
-    public class Post
+    public class Post : AuditInfo, IDeletableEntity
     {
         private ICollection<Tag> tags;
         private ICollection<Comment> comments;
@@ -25,9 +27,7 @@
         public string SubTitle { get; set; }
 
         public string ShortContent { get; set; }
-
-        public DateTime DateCreated { get; set; }
-
+        
         [Required]
         public string Content { get; set; }
 
@@ -42,5 +42,9 @@
             get { return this.tags; }
             set { this.tags = value; }
         }
+
+        public bool IsDeleted { get; set; }
+
+        public DateTime? DeletedOn { get; set; }
     }
 }
