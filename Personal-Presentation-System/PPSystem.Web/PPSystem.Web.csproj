@@ -206,9 +206,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\CVController.cs" />
     <Compile Include="Areas\Administration\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Administration\Controllers\SettingsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\SkillsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\WidgetsController.cs" />
+    <Compile Include="Areas\Blog\BlogAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Areas\Blog\Controllers\BlogController.cs" />
     <Compile Include="Controllers\ConfigurationController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\CVController.cs" />
@@ -231,14 +237,21 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\bg.jpg" />
     <Content Include="Content\images\bg.png" />
+    <Content Include="Content\images\blog.png" />
     <Content Include="Content\images\bottom.png" />
     <Content Include="Content\images\CheatinReminderLogo.jpg" />
+    <Content Include="Content\images\config.png" />
+    <Content Include="Content\images\config2.png" />
+    <Content Include="Content\images\cv.png" />
     <Content Include="Content\images\DebuggingSystemLogo.jpg" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\LevteriLogo.jpg" />
     <Content Include="Content\images\LibraryProjectLogo.jpg" />
+    <Content Include="Content\images\profile.png" />
+    <Content Include="Content\images\skills.png" />
     <Content Include="Content\images\VD_Logo.png" />
     <Content Include="Content\images\WarChessLogo.jpg" />
+    <Content Include="Content\images\widgets.png" />
     <Content Include="Content\PPSystem-UI\css\main.css" />
     <Content Include="Content\PPSystem-UI\css\normalize.min.css" />
     <Content Include="Content\PPSystem-UI\images\bg.jpg" />
@@ -265,8 +278,14 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Administration\Views\web.config" />
     <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Administration\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\CV\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Settings\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Skills\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Widgets\Index.cshtml" />
+    <Content Include="Areas\Blog\Views\web.config" />
+    <Content Include="Areas\Blog\Views\Blog\Manage.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -315,7 +334,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Areas\Blog\Views\Blog\Index.cshtml" />
     <Content Include="Views\CV\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Portfolio\Index.cshtml" />
@@ -325,6 +344,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\Models\" />
+    <Folder Include="Areas\Administration\Views\Shared\" />
+    <Folder Include="Areas\Blog\Models\" />
+    <Folder Include="Areas\Blog\Views\Shared\" />
     <Folder Include="ViewModels\Home\" />
   </ItemGroup>
   <ItemGroup>

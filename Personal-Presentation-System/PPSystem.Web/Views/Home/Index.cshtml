@@ -1,10 +1,17 @@
-﻿@{
+﻿@model PPSystem.Web.ViewModels.Account.OwnerViewModel
+@{
     ViewBag.Title = "Home Page";
 }
 
 <br />
 <div class="jumbotron">
-    
+    <div class="row">
+        <img src="@ViewBag.Photo" alt="@Model.FullName" class="col-md-3 img-responsive" />
+        <div class="col-md-8">
+            <h2>@Model.FullName</h2>
+            <h5>@Model.JobPosition at @Model.JobCompany</h5>
+        </div>
+    </div>
 </div>
 
 <div class="row">
@@ -14,7 +21,12 @@
                 <h3 class="panel-title">Top 5 Projects</h3>
             </div>
             <div class="panel-body">
-                Projects...
+                @{
+                    for (int i = 0; i < 5; i++)
+                    {
+                        <div>Project @i</div>
+                    }
+                }
             </div>
         </div>
     </div>
@@ -24,7 +36,12 @@
                 <h3 class="panel-title">Top 5 Skills</h3>
             </div>
             <div class="panel-body">
-                Skills...
+                @{
+                    for (int i = 0; i < 5; i++)
+                    {
+                        <div>Skill @i</div>    
+                    }
+                }
             </div>
         </div>
     </div>
@@ -34,7 +51,9 @@
                 <h3 class="panel-title">Contacts</h3>
             </div>
             <div class="panel-body">
-                Contacts...
+                <div>Email: @Model.Email</div>
+                <div>GitHub: @Model.GitHub</div>
+                <div>LinkedIn: @Model.LinkedIn</div>
             </div>
         </div>
     </div>

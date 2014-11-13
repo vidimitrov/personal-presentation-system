@@ -1,8 +1,64 @@
 ﻿
 @{
     ViewBag.Title = "Dashboard";
-    Layout = "~/Areas/Administration/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>You are in dashboard</h2>
+<h2 class="text-center">Dashboard</h2>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <a href="/Administration/Profile">
+                    <div class="dashboard-item text-center">
+                        <img src="~/Content/images/profile.png" alt="Edit your profile" class="img-responsive"/>
+                        <span>Profile</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="/Blog/Manage">
+                    <div class="dashboard-item text-center">
+                        <img src="~/Content/images/blog.png" alt="Blog system" class="img-responsive" />
+                        <span>Blog</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="/Administration/CV">
+                    <div class="dashboard-item text-center">
+                        <img src="~/Content/images/cv.png" alt="Edit your CV" class="img-responsive" />
+                        <span>CV</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <a href="/Administration/Skills">
+                    <div class="dashboard-item text-center">
+                        <img src="~/Content/images/skills.png" alt="Edit your skills" class="img-responsive" />
+                        <span>Skills</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="/Administration/Widgets">
+                    <div class="dashboard-item text-center">
+                        <img src="~/Content/images/widgets.png" alt="Manage widgets" class="img-responsive" />
+                        <span>Widgets</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <a href="/Administration/Settings">
+                    <div class="dashboard-item text-center">
+                        <img src="~/Content/images/config.png" alt="Edit your CV" class="img-responsive" />
+                        <span>Settings</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 

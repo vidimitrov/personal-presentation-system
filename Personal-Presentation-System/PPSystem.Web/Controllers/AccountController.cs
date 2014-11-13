@@ -143,7 +143,8 @@
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        // [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         public ActionResult Register()
         {
             return View();

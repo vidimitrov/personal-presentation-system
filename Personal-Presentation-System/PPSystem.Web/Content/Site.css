@@ -38,3 +38,8 @@ textarea {
     background-color: #16BFCE;
     border-color: #16BFCE; 
 }
+
+.dashboard-item {
+    width: 120px !important;
+    margin: 0 auto;
+}

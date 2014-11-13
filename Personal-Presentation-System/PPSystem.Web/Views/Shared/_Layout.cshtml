@@ -18,7 +18,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div id="logo">
-                    <a href="/Home/Index">
+                    <a href="/">
                         <img src="~/Content/images/VD_Logo.png" alt="Logo" />
                     </a>
                 </div>
@@ -30,6 +30,7 @@
                     <li>@Html.ActionLink("Portfolio", "Index", "Portfolio")</li>
                     <li>@Html.ActionLink("Contacts", "Index", "Contacts")</li>
                 </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
