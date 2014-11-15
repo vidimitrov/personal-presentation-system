@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace PPSystem.Web.Areas.Administration.Controllers
 {
-    public class CVController : Controller
+    public class ManageCVController : Controller
     {
         // GET: Administration/CV
         public ActionResult Index()

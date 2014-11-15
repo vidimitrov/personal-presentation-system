@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace PPSystem.Web.Areas.Administration.Controllers
 {
-    public class PortfolioController : Controller
+    public class ManagePortfolioController : Controller
     {
         // GET: Administration/Projects
         public ActionResult Index()
