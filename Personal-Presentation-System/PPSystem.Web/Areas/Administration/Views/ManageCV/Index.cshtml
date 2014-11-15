@@ -1,8 +1,71 @@
-﻿
+﻿@model PPSystem.Web.ViewModels.CV.CvViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Here you can manage your CV</h2>
+<h2 class="text-center">Here you can manage your CV</h2>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Skills</h3>
+                </div>
+                <div class="panel-body">
+                    @Helpers.Blockquote("Skills are very useful way for others to get a basic imagination of your characteristics")
+                    @Html.ActionLink("Manage skills", "ManageSkills", null, new { @class = "btn btn-success pull-right" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Previous experience</h3>
+                </div>
+                <div class="panel-body">
+                    @Helpers.Blockquote("Show others what you have worked until now, providing the Copmany names and what time have you worked there")
+                    @Html.ActionLink("Manage previous experience", "ManagePreviousExperience", null, new { @class = "btn btn-success pull-right" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Languages</h3>
+                </div>
+                <div class="panel-body">
+                    @Helpers.Blockquote("Providing your known languages will brings you a lot of connections")
+                    @Html.ActionLink("Manage languages", "ManageLanguages", null, new { @class = "btn btn-success pull-right" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Education</h3>
+                </div>
+                <div class="panel-body">
+                    @Helpers.Blockquote("Show off where you have been learned your skills")
+                    @Html.ActionLink("Manage education", "ManageEducationInstitutions", null, new { @class = "btn btn-success pull-right" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Competitions</h3>
+                </div>
+                <div class="panel-body">
+                    @Helpers.Blockquote("Share what are the competitions, that you have been participated")
+                    @Html.ActionLink("Manage competitions", "ManageCompetitions", null, new { @class = "btn btn-success pull-right" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 

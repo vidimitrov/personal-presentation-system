@@ -77,3 +77,7 @@ footer {
 .navbar-nav > li > a:hover {
     color: #16BFCE !important;
 }
+
+blockquote {
+    color: rgba(125, 125, 125, 1);
+}

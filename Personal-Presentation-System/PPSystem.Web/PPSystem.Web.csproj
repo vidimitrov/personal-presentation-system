@@ -293,6 +293,11 @@
     <Content Include="Areas\Blog\Views\Blog\Manage.cshtml" />
     <Content Include="Areas\Administration\Views\ManagePortfolio\Index.cshtml" />
     <Content Include="App_Code\Helpers.cshtml" />
+    <Content Include="Areas\Administration\Views\ManageCV\ManageSkills.cshtml" />
+    <Content Include="Areas\Administration\Views\ManageCV\ManageLanguages.cshtml" />
+    <Content Include="Areas\Administration\Views\ManageCV\ManagePreviousExperience.cshtml" />
+    <Content Include="Areas\Administration\Views\ManageCV\ManageEducationInstitutions.cshtml" />
+    <Content Include="Areas\Administration\Views\ManageCV\ManageCompetitions.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

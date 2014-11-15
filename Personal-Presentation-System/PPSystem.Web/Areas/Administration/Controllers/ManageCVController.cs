@@ -8,8 +8,32 @@ namespace PPSystem.Web.Areas.Administration.Controllers
 {
     public class ManageCVController : Controller
     {
-        // GET: Administration/CV
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult ManageSkills()
+        {
+            return View();
+        }
+
+        public ActionResult ManageEducationInstitutions()
+        {
+            return View();
+        }
+
+        public ActionResult ManageCompetitions()
+        {
+            return View();
+        }
+
+        public ActionResult ManageLanguages()
+        {
+            return View();
+        }
+
+        public ActionResult ManagePreviousExperience()
         {
             return View();
         }

@@ -1,6 +1,11 @@
-﻿@helper HelperName(string name) {
-    // your helper can contain code and/or markup, e.g.
-    // var msg = "Hello " + name;
-    // <p>@msg</p>
-    // For more information, visit http://go.microsoft.com/fwlink/?LinkID=204658
+﻿@helper ListGroupItem(string content) {
+    <li class="list-group-item">
+        @content
+    </li>
+}
+
+@helper Blockquote(string text) {
+    <blockquote>
+        <p>@text</p>
+    </blockquote>
 }
