@@ -206,10 +206,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
-    <Compile Include="Areas\Administration\Controllers\CVController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ManageCVController.cs" />
     <Compile Include="Areas\Administration\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProfileController.cs" />
-    <Compile Include="Areas\Administration\Controllers\PortfolioController.cs" />
+    <Compile Include="Areas\Administration\Controllers\ManagePortfolioController.cs" />
     <Compile Include="Areas\Administration\Controllers\SettingsController.cs" />
     <Compile Include="Areas\Administration\Controllers\SkillsController.cs" />
     <Compile Include="Areas\Administration\Controllers\WidgetsController.cs" />
@@ -232,6 +232,10 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Account\ConfigureOwnerViewModel.cs" />
     <Compile Include="ViewModels\Account\OwnerViewModel.cs" />
+    <Compile Include="ViewModels\CV\CvViewModel.cs" />
+    <Compile Include="ViewModels\CV\EducationInstitutionViewModel.cs" />
+    <Compile Include="ViewModels\CV\ExperienceViewModel.cs" />
+    <Compile Include="ViewModels\CV\SkillViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -280,14 +284,15 @@
     <Content Include="Areas\Administration\Views\web.config" />
     <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administration\Views\Dashboard\Index.cshtml" />
-    <Content Include="Areas\Administration\Views\CV\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\ManageCV\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Profile\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Settings\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Skills\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Widgets\Index.cshtml" />
     <Content Include="Areas\Blog\Views\web.config" />
     <Content Include="Areas\Blog\Views\Blog\Manage.cshtml" />
-    <Content Include="Areas\Administration\Views\Portfolio\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\ManagePortfolio\Index.cshtml" />
+    <Content Include="App_Code\Helpers.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -342,6 +347,10 @@
     <Content Include="Views\Portfolio\Index.cshtml" />
     <Content Include="Views\Configuration\Index.cshtml" />
     <Content Include="Views\Configuration\_Layout.cshtml" />
+    <Content Include="Views\Shared\Widgets\SkillsWidget\_SkillsWidget.cshtml" />
+    <Content Include="Views\CV\_PreviousWorkExperience.cshtml" />
+    <Content Include="Views\CV\_EducationInstitutions.cshtml" />
+    <Content Include="Views\Shared\Widgets\SkillsWidget\_Skill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +359,7 @@
     <Folder Include="Areas\Blog\Models\" />
     <Folder Include="Areas\Blog\Views\Shared\" />
     <Folder Include="ViewModels\Home\" />
+    <Folder Include="Views\Shared\Sections\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

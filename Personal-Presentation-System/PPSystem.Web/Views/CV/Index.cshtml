@@ -1,8 +1,33 @@
-﻿
+﻿@model PPSystem.Web.ViewModels.CV.CvViewModel
 @{
     ViewBag.Title = "CV";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>You are in the CV</h2>
+<br />
+
+<div class="container">
+    <div class="megatron">
+        <div class="row">
+            @if (@Model == null)
+            {
+                <div class="col-md-12 text-center">
+                    <h1>There is no information about the CV</h1>
+                </div>
+            }
+            else
+            {
+                <div class="col-md-9">
+                    @*<h2 class="text-center">Education</h2>
+                    @Html.Partial("_EducationInstitutions")*@
+                    <h2 class="text-center">Previous experience</h2>
+                    @Html.Partial("_PreviousWorkExperience", @Model.Experiences)
+                </div>
+                <div class="col-md-3">
+                    @Html.Partial("_SkillsWidget", @Model.Skills)
+                </div>
+            }
+        </div>
+    </div>
+</div>
 
