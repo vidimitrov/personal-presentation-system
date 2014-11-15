@@ -4,12 +4,13 @@
 }
 
 <br />
-<div class="jumbotron">
+<div class="megatron">
     <div class="row">
         <img src="@ViewBag.Photo" alt="@Model.FullName" class="col-md-3 img-responsive" />
         <div class="col-md-8">
-            <h2>@Model.FullName</h2>
-            <h5>@Model.JobPosition at @Model.JobCompany</h5>
+            <h1>@Model.FullName</h1>
+            <h3>@Model.JobPosition at @Model.JobCompany</h3>
+            <p>@Model.Summary</p>
         </div>
     </div>
 </div>

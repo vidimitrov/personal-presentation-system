@@ -1,8 +1,148 @@
-﻿
+﻿@model PPSystem.Web.ViewModels.Account.OwnerViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Here you can edit your profile</h2>
+<h2 class="text-center">Here you can edit your profile</h2>
+<hr />
+@using (Html.BeginForm("EditProfile", "Profile", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id);
+    <div class="container">
+        @* Validation summary should be shown in an alert-danger from bootswatch *@
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="row">
+            <div class="col-md-3">
+                <div class="image-upload">
+                    <img src="data:image/png;base64, @Model.Photo" alt="Change your photo" class="img-responsive" />
+                </div>
+
+                @* Implement file upload here *@
+            </div>
+            <div class="col-md-9">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Summary, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Summary, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FullName, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.FullName, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Location, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PhoneNumber, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.JobCompany, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.JobCompany, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.JobPosition, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.JobPosition, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IsAvailable, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.CheckBoxFor(model => model.IsAvailable)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Facebook, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Facebook, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Google, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Google, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Twitter, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Twitter, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LinkedIn, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.LinkedIn, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GitHub, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.GitHub, new { @class = "form-control" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            <input type="submit" value="Edit profile" class="btn btn-primary btn-lg" />
+        </div>
+    </div>
+}
+
 

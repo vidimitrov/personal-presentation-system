@@ -209,6 +209,7 @@
     <Compile Include="Areas\Administration\Controllers\CVController.cs" />
     <Compile Include="Areas\Administration\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Administration\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Administration\Controllers\PortfolioController.cs" />
     <Compile Include="Areas\Administration\Controllers\SettingsController.cs" />
     <Compile Include="Areas\Administration\Controllers\SkillsController.cs" />
     <Compile Include="Areas\Administration\Controllers\WidgetsController.cs" />
@@ -286,6 +287,7 @@
     <Content Include="Areas\Administration\Views\Widgets\Index.cshtml" />
     <Content Include="Areas\Blog\Views\web.config" />
     <Content Include="Areas\Blog\Views\Blog\Manage.cshtml" />
+    <Content Include="Areas\Administration\Views\Portfolio\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -343,7 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Administration\Models\" />
+    <Folder Include="Areas\Administration\ViewModels\" />
     <Folder Include="Areas\Administration\Views\Shared\" />
     <Folder Include="Areas\Blog\Models\" />
     <Folder Include="Areas\Blog\Views\Shared\" />

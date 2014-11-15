@@ -3,7 +3,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background: url('images/bg.png') repeat;
-    color: #CBCBCB;
+    color: #e8e8e8;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -19,12 +19,6 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
 #logo {
     height: 50px;
@@ -42,4 +36,44 @@ textarea {
 .dashboard-item {
     width: 120px !important;
     margin: 0 auto;
+}
+
+.megatron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #FFF;
+}
+
+.container .megatron {
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 6px;
+}
+
+.megatron h1 {
+    color: #16BFCE !important;
+    margin: 0px;
+}
+
+.megatron h3 {
+    color: #999 !important;
+    margin-top: 10px;
+}
+
+.megatron p {
+    color: #000;
+}
+
+footer {
+    color: #FFF;
+}
+
+.navbar-nav > li > a {
+    color: #FFF !important;
+}
+
+.navbar-nav > li > a:hover {
+    color: #16BFCE !important;
 }
