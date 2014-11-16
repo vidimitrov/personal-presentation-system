@@ -69,6 +69,7 @@
     <Compile Include="CV\Skill.cs" />
     <Compile Include="CV\SkillCategory.cs" />
     <Compile Include="DailyCalendar\Task.cs" />
+    <Compile Include="Portfolio\Review.cs" />
     <Compile Include="Portfolio\Technology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

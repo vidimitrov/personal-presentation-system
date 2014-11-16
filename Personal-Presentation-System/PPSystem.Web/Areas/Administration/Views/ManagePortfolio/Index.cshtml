@@ -1,8 +1,50 @@
-﻿
+﻿@model ICollection<PPSystem.Web.ViewModels.Portfolio.ProjectViewModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Manage your projects</h2>
+<h1 class ="text-center">Manage your projects</h2>
+<hr />
+
+<div class="container">
+    @if (Model.Count == 0)
+    {
+        <h2>No projects</h2>
+    }
+    else
+    {
+        <div class="row">
+            @(Html.Kendo()
+                .Grid<PPSystem.Web.ViewModels.Portfolio.ProjectViewModel>(Model)
+                .Name("projects-grid")
+                .Columns(columns =>
+                {
+                    columns.Bound(pr => pr.Id);
+                    columns.Bound(pr => pr.Title);
+                    columns.Bound(pr => pr.RepoUrl);
+                    columns.Bound(pr => pr.Rating);
+                    columns.Bound(pr => pr.Description);
+                    columns.Template(@<text>
+                        <a href="/Administration/ManagePortfolio/EditProject/@item.Id" class="btn btn-primary">Edit</a>
+                    </text>);
+                    columns.Template(@<text>
+                    <a href="/Administration/ManagePortfolio/DeleteProject/@item.Id" class="btn btn-danger">Delete</a>
+                    </text>);
+                })
+            .Pageable(pageable => pageable
+                .Refresh(true)
+                .PageSizes(true)
+                .ButtonCount(5))
+            .Sortable()
+            .Filterable()
+            .Groupable())
+        </div>
+    }
+
+    <br />
+    <div class="row text-center">
+        @Html.ActionLink("Add project", "AddProject", null, new { @class = "btn btn-lg btn-success" })
+    </div>
+</div>
 
