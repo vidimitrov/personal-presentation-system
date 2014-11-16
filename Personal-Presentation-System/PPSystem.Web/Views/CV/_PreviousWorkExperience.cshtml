@@ -1,6 +1,31 @@
 ﻿@model ICollection<PPSystem.Web.ViewModels.CV.ExperienceViewModel>
 
-@foreach (var experience in @Model) 
+@foreach (var experience in @Model)
 {
+    if (experience.IsDeleted)
+    {
+        continue;
+    }
     
+    <span class="label label-info pull-right">
+        @experience.From.Value.ToString("MMM dd yyyy") - 
+        @if (@experience.To != null)
+        {
+            <span>@experience.To.Value.ToString("MMM dd yyyy")</span>
+        }
+        else
+        {
+            <span>Present</span>
+        }
+    </span>
+    
+    <h3>@experience.JobTitle</h3>
+    
+    if (!String.IsNullOrEmpty(experience.CompanyName))
+    {
+        <h4>At: @experience.CompanyName</h4>
+    }
+
+    <p>@experience.Description</p>
+    <hr />
 }

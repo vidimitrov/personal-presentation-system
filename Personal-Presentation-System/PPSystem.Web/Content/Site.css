@@ -57,7 +57,7 @@
     margin: 0px;
 }
 
-.megatron h3 {
+.megatron h2, .megatron h3, .megatron h4, .megatron h5 {
     color: #999 !important;
     margin-top: 10px;
 }

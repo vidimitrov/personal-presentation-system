@@ -19,15 +19,17 @@
     public class CVController : Controller
     {
         private readonly IDeletableEntityRepository<CV> cvs;
+        private readonly IDeletableEntityRepository<CV> experiences;
         private readonly IDeletableEntityRepository<ApplicationUser> users;
 
         protected UserManager<ApplicationUser> UserManager { get; set; }
         
         public CVController(IDeletableEntityRepository<CV> cvs, 
-            IDeletableEntityRepository<ApplicationUser> users)
+            IDeletableEntityRepository<ApplicationUser> users, IDeletableEntityRepository<CV> experiences)
         {
             this.cvs = cvs;
             this.users = users;
+            this.experiences = experiences;
         }
 
         public ActionResult Index()

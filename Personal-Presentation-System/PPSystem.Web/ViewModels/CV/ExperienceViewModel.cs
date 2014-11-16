@@ -18,6 +18,8 @@
         [Display(Name = "Worked to")]
         public DateTime? To { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public string CompanyName { get; set; }
 
         public string JobTitle { get; set; }

@@ -23,7 +23,14 @@
                     columns.Bound(exp => exp.JobTitle);
                     columns.Bound(exp => exp.From);
                     columns.Bound(exp => exp.To);
+                    columns.Bound(exp => exp.Description);
                     columns.Bound(exp => exp.Type);
+                    columns.Template(@<text>
+                        <a href="/Administration/ManageCV/EditExperience/@item.Id" class="btn btn-primary">Edit</a>
+                    </text>);
+                    columns.Template(@<text>
+                        <a href="/Administration/ManageCV/DeleteExperience/@item.Id" class="btn btn-danger">Delete</a>
+                    </text>);
                 })
                 .Pageable(pageable => pageable
                     .Refresh(true)

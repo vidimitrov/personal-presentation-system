@@ -9,6 +9,7 @@
     using PPSystem.Models.CV;
     using PPSystem.Web.ViewModels.CV;
     using System;
+    using System.Data;
 
     public class ManageCVController : Controller
     {
@@ -78,8 +79,8 @@
 
         public ActionResult ManagePreviousExperience()
         {
-            var cv = this.cvs.All().Project().To<CvViewModel>().FirstOrDefault();
-            var experiences = cv.Experiences;
+            //var cv = this.cvs.All().Project().To<CvViewModel>().FirstOrDefault();
+            var experiences = this.experiences.All().Project().To<ExperienceViewModel>().ToList();
             
             return View(experiences);
         }
@@ -101,7 +102,7 @@
             {
                 var experience = new Experience()
                 {
-                    CompanyName = ,
+                    CompanyName = inputExperience.CompanyName,
                     CreatedOn = DateTime.Now,
                     Description = inputExperience.Description,
                     From = dateFrom,
@@ -116,6 +117,62 @@
             }
 
             return RedirectToAction("Index", "ManageCV");
+        }
+
+        public ActionResult DeleteExperience(int id)
+        {
+            this.experiences.Delete(this.experiences.GetById(id));
+            this.experiences.SaveChanges();
+
+            return RedirectToAction("ManagePreviousExperience", "ManageCV");
+        }
+
+        public ActionResult EditExperience(int id)
+        {
+            var experience = this.experiences.All()
+                .Project()
+                .To<ExperienceViewModel>()
+                .Where(e => e.Id == id)
+                .FirstOrDefault();
+
+            return View(experience);
+        }
+
+        [HttpPost]
+        public ActionResult EditExperience(ExperienceViewModel updatedExperience)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var experience = this.experiences.All().Where(u => u.Id == updatedExperience.Id).First();
+                    
+                    if (updatedExperience.JobTitle != null && updatedExperience.JobTitle != experience.JobTitle) 
+                    {
+                        experience.JobTitle = updatedExperience.JobTitle;
+                    }
+
+                    if (updatedExperience.CompanyName != null && updatedExperience.CompanyName != experience.CompanyName) 
+                    {
+                        experience.CompanyName = updatedExperience.CompanyName;
+                    }
+
+                    if (updatedExperience.Description != null && updatedExperience.Description != experience.Description) 
+                    {
+                        experience.Description = updatedExperience.Description;
+                    }
+
+                    this.experiences.SaveChanges();
+
+                    return RedirectToAction("ManagePreviousExperience", "ManageCV");
+                }
+            }
+            catch (DataException)
+            {
+                ModelState.AddModelError("", "Unable to save experience changes.");
+            }
+
+            return View();
         }
 
         private DateTime? ParseStringToDate(string dateString)

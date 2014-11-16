@@ -9,7 +9,12 @@
         <img src="@ViewBag.Photo" alt="@Model.FullName" class="col-md-3 img-responsive" />
         <div class="col-md-8">
             <h1>@Model.FullName</h1>
-            <h3>@Model.JobPosition at @Model.JobCompany</h3>
+            
+            @if (!String.IsNullOrEmpty(@Model.JobPosition) != null && !String.IsNullOrEmpty(@Model.JobCompany))
+            {
+                <h3>@Model.JobPosition at @Model.JobCompany</h3>
+            }
+            
             <p>@Model.Summary</p>
         </div>
     </div>
