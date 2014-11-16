@@ -15,6 +15,7 @@
     using PPSystem.Web.ViewModels.Account;
     using Microsoft.AspNet.Identity.EntityFramework;
     using PPSystem.Data;
+    using PPSystem.Models.CV;
 
     [Authorize]
     public class AccountController : Controller
@@ -181,7 +182,7 @@
                     context.SaveChanges();
 
                     UserManager.AddToRole(user.Id, adminRoleName);
-
+                    
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

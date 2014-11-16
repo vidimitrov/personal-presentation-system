@@ -25,7 +25,7 @@
 
         public ActionResult Index()
         {
-            var owner = this.users.All().Project().To<OwnerViewModel>().First();
+            var owner = this.users.All().Project().To<OwnerViewModel>().FirstOrDefault();
 
             if (owner == null)
             {
