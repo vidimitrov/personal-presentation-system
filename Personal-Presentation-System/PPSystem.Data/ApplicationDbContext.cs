@@ -30,6 +30,7 @@
         public IDbSet<Contributor> Contributors { get; set; }
         public IDbSet<ProjectCategory> ProjectCategories { get; set; }
         public IDbSet<Technology> Technologies { get; set; }
+        public IDbSet<Review> Reviews { get; set; }
 
         public IDbSet<CV> CVs { get; set; }
         public IDbSet<Skill> Skills { get; set; }

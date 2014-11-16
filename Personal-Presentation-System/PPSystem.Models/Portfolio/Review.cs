@@ -2,21 +2,16 @@
 {
     using PPSystem.Common.Models;
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public class Contributor : AuditInfo, IDeletableEntity
+    public class Review : AuditInfo, IDeletableEntity
     {
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Content { get; set; }
 
-        public string Email { get; set; }
-
-        public string VersionControlSystemProfile { get; set; }
-
-        public string ContributionType { get; set; }
+        public string ReviewerName { get; set; }
 
         public bool IsDeleted { get; set; }
 
