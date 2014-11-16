@@ -16,7 +16,15 @@
                 </div>
                 <div class="panel-body">
                     @Helpers.Blockquote("Skills are very useful way for others to get a basic imagination of your characteristics")
-                    @Html.ActionLink("Manage skills", "ManageSkills", null, new { @class = "btn btn-success pull-right" })
+                    @Html.ActionLink("Manage skills", "ManageSkills",
+                        new
+                        {
+                            model = Model.Skills
+                        },
+                        new
+                        {
+                            @class = "btn btn-success pull-right"
+                        })
                 </div>
             </div>
         </div>
@@ -40,7 +48,15 @@
                 </div>
                 <div class="panel-body">
                     @Helpers.Blockquote("Providing your known languages will brings you a lot of connections")
-                    @Html.ActionLink("Manage languages", "ManageLanguages", null, new { @class = "btn btn-success pull-right" })
+                    @Html.ActionLink("Manage languages", "ManageLanguages",
+                        new
+                        {
+                            model = Model.Languages
+                        },
+                        new
+                        {
+                            @class = "btn btn-success pull-right"
+                        })
                 </div>
             </div>
         </div>
@@ -51,7 +67,15 @@
                 </div>
                 <div class="panel-body">
                     @Helpers.Blockquote("Show off where you have been learned your skills")
-                    @Html.ActionLink("Manage education", "ManageEducationInstitutions", null, new { @class = "btn btn-success pull-right" })
+                    @Html.ActionLink("Manage education", "ManageEducationInstitutions",
+                        new
+                        {
+                            model = Model.EducationInstitutions
+                        },
+                        new
+                        {
+                            @class = "btn btn-success pull-right"
+                        })
                 </div>
             </div>
         </div>
@@ -62,7 +86,15 @@
                 </div>
                 <div class="panel-body">
                     @Helpers.Blockquote("Share what are the competitions, that you have been participated")
-                    @Html.ActionLink("Manage competitions", "ManageCompetitions", null, new { @class = "btn btn-success pull-right" })
+                    @Html.ActionLink("Manage competitions", "ManageCompetitions",
+                        new
+                        {
+                            model = Model.Competitions
+                        },
+                        new
+                        {
+                            @class = "btn btn-success pull-right"
+                        })
                 </div>
             </div>
         </div>

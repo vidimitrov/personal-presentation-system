@@ -1,5 +1,39 @@
-﻿@{
+﻿@model ICollection<PPSystem.Web.ViewModels.CV.LanguageViewModel>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Manage languages</h1>
+<h1 class="text-center">Manage languages</h1>
+<hr />
+
+<div class="container">
+    @if (Model.Count == 0)
+    {
+        <h2>No languages</h2>
+    }
+    else
+    {
+        <div class="row">
+            <table class="table table-striped table-hover ">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Language</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var experience in Model)
+                    {
+                        @Html.Partial("_LanguageRow", experience);
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div class="row text-center">
+        @Html.ActionLink("Add language", "AddLanguage", null, new { @class = "btn btn-lg btn-success" })
+    </div>
+</div>

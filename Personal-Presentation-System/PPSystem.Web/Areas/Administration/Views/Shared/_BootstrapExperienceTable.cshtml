@@ -1,0 +1,23 @@
+﻿@model ICollection<PPSystem.Web.ViewModels.CV.ExperienceViewModel>
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Company</th>
+            <th>Job position</th>
+            <th>Period</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var experience in Model)
+        {
+            @Html.Partial("_ExperienceRow", experience);
+        }
+    </tbody>
+</table>
+

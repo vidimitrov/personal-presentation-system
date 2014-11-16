@@ -1,0 +1,23 @@
+﻿@model PPSystem.Web.ViewModels.CV.ExperienceViewModel
+
+<tr class="info">
+    <td>@Model.Id</td>
+    <td>@Model.CompanyName</td>
+    <td>@Model.JobTitle</td>
+    <td>
+        <span>@Model.From - </span>
+        @if (Model.To != null)
+        {
+            <span>@Model.To</span>
+        }
+        else
+        {
+            <span>Present</span>
+        }
+
+    </td>
+    <td>@Model.Description</td>
+    <td>@Model.Type</td>
+    <td>@Html.ActionLink("Edit", "EditExperience", null, new { @class = "btn btn-primary pull-right" })</td>
+    <td>@Html.ActionLink("Delete", "DeleteExperience", null, new { @class = "btn btn-danger pull-right" })</td>
+</tr>

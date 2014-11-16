@@ -1,5 +1,42 @@
-﻿@{
+﻿@model ICollection<PPSystem.Web.ViewModels.CV.ExperienceViewModel>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Manage Previous work experience</h1>
+<h1 class="text-center">Manage Previous work experience</h1>
+<hr />
+
+<div class="container">
+    @if (Model.Count == 0)
+    {
+        <h2>No previous experience</h2>
+    }
+    else
+    {
+        <div class="row">
+            @(Html.Kendo()
+                .Grid<PPSystem.Web.ViewModels.CV.ExperienceViewModel>(Model)
+                .Name("experience-grid")
+                .Columns(columns =>
+                {
+                    columns.Bound(exp => exp.CompanyName);
+                    columns.Bound(exp => exp.JobTitle);
+                    columns.Bound(exp => exp.From);
+                    columns.Bound(exp => exp.To);
+                    columns.Bound(exp => exp.Type);
+                })
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .PageSizes(true)
+                    .ButtonCount(5))
+                .Sortable()
+                .Filterable()
+                .Groupable())
+        </div>
+    }
+
+    <br />
+    <div class="row text-center">
+        @Html.ActionLink("Add experience", "AddExperience", null, new { @class = "btn btn-lg btn-success" })
+    </div>
+</div>
