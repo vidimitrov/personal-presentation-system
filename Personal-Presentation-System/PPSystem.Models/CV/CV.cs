@@ -15,25 +15,84 @@
 
         public CV()
         {
-            this.educationInstitutions = new HashSet<EducationInstitution>();
-            this.experiences = new HashSet<Experience>();
-            this.competitions = new HashSet<Competition>();
-            this.languages = new HashSet<Language>();
-            this.skills = new HashSet<Skill>();
+            this.EducationInstitutions = new HashSet<EducationInstitution>();
+            this.Experiences = new HashSet<Experience>();
+            this.Competitions = new HashSet<Competition>();
+            this.Languages = new HashSet<Language>();
+            this.Skills = new HashSet<Skill>();
+        }
+
+        public CV(string ownerId, DateTime createdOn)
+            : base()
+        {
+            this.OwnerId = ownerId;
+            this.CreatedOn = createdOn;
         }
 
         [Key]
         public int Id { get; set; }
 
-        public virtual ICollection<EducationInstitution> EducationInstitutions { get; set; }
+        public virtual string OwnerId { get; set; }
 
-        public virtual ICollection<Experience> Experiences { get; set; }
+        public virtual ICollection<EducationInstitution> EducationInstitutions 
+        {
+            get
+            {
+                return this.educationInstitutions;
+            }
+            set
+            {
+                this.educationInstitutions = value;
+            }
+        }
 
-        public virtual ICollection<Competition> Competitions { get; set; }
+        public virtual ICollection<Experience> Experiences 
+        {
+            get
+            {
+                return this.experiences;
+            }
+            set
+            {
+                this.experiences = value;
+            }
+        }
 
-        public virtual ICollection<Language> Languages { get; set; }
+        public virtual ICollection<Competition> Competitions
+        {
+            get
+            {
+                return this.competitions;
+            }
+            set
+            {
+                this.competitions = value;
+            }
+        }
 
-        public virtual ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<Language> Languages 
+        {
+            get
+            {
+                return this.languages;
+            }
+            set
+            {
+                this.languages = value;
+            }
+        }
+
+        public virtual ICollection<Skill> Skills 
+        {
+            get
+            {
+                return this.skills;
+            }
+            set
+            {
+                this.skills = value;
+            }
+        }
 
         public bool IsDeleted { get; set; }
 
