@@ -662,6 +662,12 @@
     <Content Include="Areas\Administration\Views\Shared\_BootstrapExperienceTable.cshtml" />
     <Content Include="Areas\Administration\Views\ManageCV\EditExperience.cshtml" />
     <Content Include="Areas\Administration\Views\ManagePortfolio\AddProject.cshtml" />
+    <Content Include="Areas\Administration\Views\ManagePortfolio\EditProject.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_ManageContributors.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_ManageReviews.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_ManageTechnologies.cshtml" />
+    <Content Include="Areas\Administration\Views\ManagePortfolio\AddTechnology.cshtml" />
+    <Content Include="Areas\Administration\Views\ManagePortfolio\AddContributor.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -1,0 +1,23 @@
+﻿@model ICollection<PPSystem.Web.ViewModels.Portfolio.TechnologyViewModel>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Manage technologies</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            @{
+                foreach (var technology in Model)
+                {
+                    <li class="list-group-item">
+                        @technology.Name
+                        <a href="/Administration/ManagePortfolio/DeleteTechnology/@technology.Id" class="btn btn-danger pull-right">Delete</a>
+                    </li>
+                }
+            }
+        </ul>
+        <div>
+            <a href="/Administration/ManagePortfolio/AddTechnology" class="btn btn-success">Add technology</a>
+        </div>
+    </div>
+</div>

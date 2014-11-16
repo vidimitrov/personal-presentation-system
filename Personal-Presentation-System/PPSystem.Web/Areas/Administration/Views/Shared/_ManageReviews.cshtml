@@ -1,0 +1,20 @@
+﻿@model ICollection<PPSystem.Web.ViewModels.Portfolio.ReviewViewModel>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Manage reviews</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            @{
+                foreach (var review in Model)
+                {
+                    <li class="list-group-item">
+                        @review.Content.Substring(0, 50)
+                        <a href="/Administration/ManagePortfolio/DeleteReview/@review.Id" class="btn btn-danger pull-right">Delete</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>

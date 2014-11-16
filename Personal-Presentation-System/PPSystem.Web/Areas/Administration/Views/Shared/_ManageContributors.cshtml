@@ -1,0 +1,25 @@
+﻿@model ICollection<PPSystem.Web.ViewModels.Portfolio.ContributorViewModel>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Manage contributors</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            @{
+                foreach (var contributor in Model)
+                {
+                    <li class="list-group-item">
+                        <a href="/Administration/ManagePortfolio/DeleteContributor/@contributor.Id" class="btn btn-danger pull-right">Delete</a>
+                        @contributor.Name
+                        <br />
+                        @contributor.VersionControlSystemProfile
+                    </li>
+                }
+            }
+        </ul>
+        <div>
+            <a href="/Administration/ManagePortfolio/AddContributor" class="btn btn-success">Add contributor</a>
+        </div>
+    </div>
+</div>
