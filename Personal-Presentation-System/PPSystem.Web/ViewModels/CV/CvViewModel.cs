@@ -7,14 +7,14 @@
 
     public class CvViewModel : IMapFrom<PPSystem.Models.CV.CV>
     {
-        public virtual ICollection<EducationInstitution> EducationInstitutions { get; set; }
+        public virtual ICollection<EducationInstitutionViewModel> EducationInstitutions { get; set; }
 
-        public virtual ICollection<Experience> Experiences { get; set; }
+        public virtual ICollection<ExperienceViewModel> Experiences { get; set; }
 
-        public virtual ICollection<Competition> Competitions { get; set; }
+        public virtual ICollection<CompetitionViewModel> Competitions { get; set; }
 
-        public virtual ICollection<Language> Languages { get; set; }
+        public virtual ICollection<LanguageViewModel> Languages { get; set; }
 
-        public virtual ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<SkillViewModel> Skills { get; set; }
     }
 }
