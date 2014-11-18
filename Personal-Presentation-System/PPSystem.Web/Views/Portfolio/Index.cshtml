@@ -1,8 +1,18 @@
-﻿
+﻿@model ICollection<PPSystem.Web.ViewModels.Portfolio.ProjectViewModel>
 @{
     ViewBag.Title = "Portfolio";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>You are in the Portfolio</h2>
+<br />
 
+<div class="megatron">
+    <h1 style="color:#656565 !important" class="text-center">Projects developed</h1>
+    <br />
+    @foreach (var project in Model)
+    {
+        <div class="row">
+            @Html.Partial("_Project", project)
+        </div>
+    }
+</div>

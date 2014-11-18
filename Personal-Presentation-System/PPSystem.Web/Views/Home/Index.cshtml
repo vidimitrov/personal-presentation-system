@@ -9,13 +9,13 @@
         <img src="@ViewBag.Photo" alt="@Model.FullName" class="col-md-3 img-responsive" />
         <div class="col-md-8">
             <h1>@Model.FullName</h1>
-            
+
             @if (!String.IsNullOrEmpty(@Model.JobPosition) != null && !String.IsNullOrEmpty(@Model.JobCompany))
             {
                 <h3>@Model.JobPosition at @Model.JobCompany</h3>
             }
-            
-            <p>@Model.Summary</p>
+
+            @Helpers.Blockquote(Model.Summary)
         </div>
     </div>
 </div>
@@ -45,7 +45,7 @@
                 @{
                     for (int i = 0; i < 5; i++)
                     {
-                        <div>Skill @i</div>    
+                        <div>Skill @i</div>
                     }
                 }
             </div>
@@ -57,9 +57,14 @@
                 <h3 class="panel-title">Contacts</h3>
             </div>
             <div class="panel-body">
-                <div>Email: @Model.Email</div>
-                <div>GitHub: @Model.GitHub</div>
-                <div>LinkedIn: @Model.LinkedIn</div>
+                <ul class="list-group contacts">
+                    @Helpers.ListGroupItem("Email: ", Model.Email, false)
+                    @Helpers.ListGroupItem("Github: ", Model.GitHub, true)
+                    @Helpers.ListGroupItem("Google: ", Model.Google, true)
+                    @Helpers.ListGroupItem("Twitter: ", Model.Twitter, true)
+                    @Helpers.ListGroupItem("Facebook: ", Model.Facebook, true)
+                    @Helpers.ListGroupItem("LinkedIn: ", Model.LinkedIn, true)
+                </ul>
             </div>
         </div>
     </div>
