@@ -4,5 +4,10 @@
 
 @foreach (var skill in @Model)
 {
+    if (skill.IsDeleted)
+    {
+        continue;
+    }
+    
     @Html.Partial("_Skill", skill)
 }
