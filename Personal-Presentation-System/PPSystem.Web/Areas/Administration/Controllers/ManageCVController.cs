@@ -57,6 +57,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddLanguage(LanguageViewModel inputLanguage)
         {
             var cv = this.cvs.All().FirstOrDefault();
@@ -90,6 +91,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddExperience(ExperienceViewModel inputExperience)
         {
             var cv = this.cvs.All().FirstOrDefault();
@@ -138,6 +140,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult EditExperience(ExperienceViewModel updatedExperience)
         {
             try
@@ -187,6 +190,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult AddSkill(SkillViewModel inputSkill)
         {
             var cv = this.cvs.All().FirstOrDefault();

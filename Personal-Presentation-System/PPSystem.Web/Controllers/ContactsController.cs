@@ -18,6 +18,7 @@
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult SendMail(EmailViewModel inputEmail)
         {
             if (ModelState.IsValid)
