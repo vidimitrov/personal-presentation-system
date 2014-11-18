@@ -1,11 +1,26 @@
-﻿@helper ListGroupItem(string content) {
+﻿@helper ListGroupItem(string prefix, string content, bool isLink) {
     <li class="list-group-item">
-        @content
+        @if (isLink)
+        {
+            @prefix @:- <a href="@content">@content</a>
+        }
+        else
+	    {
+            @prefix @:- @content
+	    }
+        
     </li>
 }
 
 @helper Blockquote(string text) {
     <blockquote>
         <p>@text</p>
+    </blockquote>
+}
+
+@helper Review(string review, string reviewer) {
+    <blockquote class="pull-right">
+        <p>@review</p>
+        <small>Review by <cite title="Source Title">@reviewer</cite></small>
     </blockquote>
 }

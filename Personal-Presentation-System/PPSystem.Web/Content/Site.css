@@ -81,3 +81,25 @@ footer {
 blockquote {
     color: rgba(125, 125, 125, 1);
 }
+
+.contacts {
+    color: #999 !important;
+}
+
+.star {
+    color: #FFAB00;
+    /*font-size: 20px;*/
+}
+
+.pencil {
+    color: #11C2A9;
+}
+
+.star b, .pencil b {
+    color: #9E9E9E;
+}
+
+tbody {
+    color: #999;
+    font-size: 18px;
+}
