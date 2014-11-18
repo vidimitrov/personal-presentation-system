@@ -15,10 +15,13 @@
     public class PortfolioController : Controller
     {
         private readonly IDeletableEntityRepository<Portfolio> portfolios;
+        private readonly IDeletableEntityRepository<Project> projects;
 
-        public PortfolioController(IDeletableEntityRepository<Portfolio> portfolios)
+        public PortfolioController(IDeletableEntityRepository<Portfolio> portfolios,
+            IDeletableEntityRepository<Project> projects)
         {
             this.portfolios = portfolios;
+            this.projects = projects;
         }
 
         public ActionResult Index()
@@ -33,7 +36,9 @@
                 this.portfolios.SaveChanges();
             }
 
-            return View();
+            var projects = this.projects.All().Project().To<ProjectViewModel>().ToList();
+
+            return View(projects);
         }
     }
 }
