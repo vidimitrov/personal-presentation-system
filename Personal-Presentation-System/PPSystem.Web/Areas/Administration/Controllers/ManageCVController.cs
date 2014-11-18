@@ -15,11 +15,15 @@
     {
         private readonly IDeletableEntityRepository<CV> cvs;
         private readonly IDeletableEntityRepository<Experience> experiences;
+        private readonly IDeletableEntityRepository<Skill> skills;
 
-        public ManageCVController(IDeletableEntityRepository<CV> cvs, IDeletableEntityRepository<Experience> experiences)
+        public ManageCVController(IDeletableEntityRepository<CV> cvs, 
+            IDeletableEntityRepository<Experience> experiences,
+            IDeletableEntityRepository<Skill> skills)
         {
             this.cvs = cvs;
             this.experiences = experiences;
+            this.skills = skills;
         }
 
         public ActionResult Index()
@@ -28,12 +32,7 @@
 
             return View(cv);
         }
-
-        public ActionResult ManageSkills()
-        {
-            return View();
-        }
-
+        
         public ActionResult ManageEducationInstitutions()
         {
             return View();
@@ -173,6 +172,51 @@
             }
 
             return View();
+        }
+
+        public ActionResult ManageSkills()
+        {
+            var skills = this.skills.All().Project().To<SkillViewModel>().ToList();
+
+            return View(skills);
+        }
+
+        public ActionResult AddSkill()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSkill(SkillViewModel inputSkill)
+        {
+            var cv = this.cvs.All().FirstOrDefault();
+
+            if (ModelState.IsValid)
+            {
+                var skill = new Skill()
+                {
+                    Name = inputSkill.Name,
+                    Completion = inputSkill.Completion
+                };
+
+                //this.skills.Add(skill);
+                //this.skills.SaveChanges();
+
+                cv.Skills.Add(skill);
+                this.cvs.SaveChanges();
+
+                return RedirectToAction("ManageSkills", "ManageCV");
+            }
+
+            return View();
+        }
+
+        public ActionResult DeleteSkill(int id)
+        {
+            this.skills.Delete(this.skills.GetById(id));
+            this.skills.SaveChanges();
+
+            return RedirectToAction("ManageSkills", "ManageCV");
         }
 
         private DateTime? ParseStringToDate(string dateString)

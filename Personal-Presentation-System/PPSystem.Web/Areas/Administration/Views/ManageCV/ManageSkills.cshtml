@@ -1,5 +1,54 @@
-﻿@{
+﻿@model ICollection<PPSystem.Web.ViewModels.CV.SkillViewModel>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Manage skills</h1>
+<h1 class="text-center">Manage skills</h1>
+<hr />
+
+@if (Model.Count == 0)
+{
+    <h2>There are no skills defined</h2>
+}
+else
+{
+    <table class="table table-hover ">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Completion</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var skill in Model)
+            {
+                <tr class="info">
+                    <td width="30">@skill.Id</td>
+                    <td width="200"><b>@skill.Name</b></td>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-1">
+                                @skill.Completion%
+                            </div>
+                            <div class="col-md-11">
+                                <div class="progress progress-striped active">
+                                    <div class="progress-bar" style="width: @skill.Completion%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="50">@Html.ActionLink("Edit", "EditSkill", new { id = skill.Id }, new { @class = "btn btn-primary pull-right" })</td>
+                    <td width="50">@Html.ActionLink("Delete", "DeleteSkill", new { id = skill.Id }, new { @class = "btn btn-danger pull-right" })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<div class="row text-center">
+    @Html.ActionLink("Add skill", "AddSkill", null, new { @class = "btn btn-lg btn-success" })
+</div>
